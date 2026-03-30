@@ -1,0 +1,5 @@
+Input validator Class:
+  if (!txt.isEmpty())
+  txt=reader.nextLine().trim()
+  return Integer.parseInt(reader.nextLine())
+  catch(NumberFormatException e)
