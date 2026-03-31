@@ -3,12 +3,13 @@ package person;
 import java.util.Scanner;
 
 public class InputValidator {
+    
+    
     /*String validation - //empty condition*/
     public static String readStrings(Scanner reader, String message){
-        String txt;
         while (true){
            System.out.print(message);
-           txt=reader.nextLine().trim();
+           String txt=reader.nextLine().trim();
            if (!txt.isEmpty()){
                return txt;      
            }else{
@@ -16,6 +17,9 @@ public class InputValidator {
            }
         }
     } 
+    
+    
+    /*Integers validation*/
     public static int readIntegers(Scanner reader, String message){
         while(true){
             try{
@@ -26,8 +30,33 @@ public class InputValidator {
             }
         }
     }
+    
+    /*Enum validations - Wheter it really belongs*/
+    public static char readGenderChars(Scanner reader, String message){
+        while(true){
+            String gotGender=readStrings(reader, message);/*Avoiding empties*/
+            char gender=gotGender.toLowerCase().charAt(0);
+            if(gender=='m' || gender=='f'){
+                return gender;
+            }else{
+                System.out.println("No valid data. Try again.");
+            }
+        }
+    }
 }
    
     
     
 
+
+
+    /*Gender Validation*/
+    /*public static String readGender(Scanner reader, String message){
+        String gender;
+        while(true){
+            gender=reader.nextLine().toLowerCase();
+            if()
+            
+            
+        }
+    }*/
