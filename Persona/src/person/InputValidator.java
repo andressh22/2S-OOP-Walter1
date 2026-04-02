@@ -31,7 +31,7 @@ public class InputValidator {
         }
     }
     
-    /*Enum validations - Wheter it really belongs*/
+    /*Char and gender validation*/
     public static char readGenderChars(Scanner reader, String message){
         while(true){
             String gotGender=readStrings(reader, message);/*Avoiding empties*/
