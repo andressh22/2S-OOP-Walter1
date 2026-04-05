@@ -3,3 +3,4 @@ Input validator Class:
   txt=reader.nextLine().trim()
   return Integer.parseInt(reader.nextLine())
   catch(NumberFormatException e)
+  char gender=gotGender.toLowerCase().charAt(0)
