@@ -2,7 +2,7 @@
 package planeta;
 
 
-public class Planeta {
+public class Planet {
     
     
     /*Fields*/
@@ -22,7 +22,7 @@ public class Planeta {
     
     
     /*Constructor method*/
-    Planeta(String name, int numberOfSatellites, double mass,
+    Planet(String name, int numberOfSatellites, double mass,
             double volume, int diameter, int distanceOfSun,
             planetTypes planetType, boolean lookable){
         this.name=name;
@@ -34,4 +34,6 @@ public class Planeta {
         this.planetType=planetType;
         this.lookable=lookable;
     }
+    
+    
 }
