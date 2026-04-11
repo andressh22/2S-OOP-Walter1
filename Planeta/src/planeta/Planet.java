@@ -1,6 +1,6 @@
 
 package planeta;
-
+import java.util.Scanner;
 
 public class Planet {
     
@@ -35,5 +35,22 @@ public class Planet {
         this.lookable=lookable;
     }
     
+    /*Showing method*/
+    public void ShowPlanetFields(){
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("Planet name: "+name);
+        System.out.println("Number of satellites: "+numberOfSatellites);
+        System.out.println("Mass: "+mass+"kg");
+        System.out.println("Volume: "+volume+"km3");
+        System.out.println("Diameter: "+diameter+" Millions of kilometers");
+        System.out.println("Distance of the sun: "+distanceOfSun+" Million of kilometers");
+        System.out.println("Type: "+planetType+" planet");
+        if(lookable==true){
+            System.out.println("The planet is lookable");
+        }else{
+            System.out.println("The planet is not lookable");
+        }
+        System.out.println("----------------------------------------------------------------");
+    }
     
 }
