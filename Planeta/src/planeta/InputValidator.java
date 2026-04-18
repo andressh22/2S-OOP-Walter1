@@ -7,7 +7,7 @@ public class InputValidator {
     
     
     /*For a possible empty name*/
-    public static String ReadString(Scanner reader, String message){
+    public static String readString(Scanner reader, String message){
         while(true){
             System.out.print(message);
             String txt=reader.nextLine().trim();
@@ -20,9 +20,9 @@ public class InputValidator {
     }
     
     /*For a possible no String and negative numbers*/
-    public static int ReadInt(Scanner reader, String message){
+    public static int readInt(Scanner reader, String message){
         while(true){
-            String enteredNumber=ReadString(reader, message);
+            String enteredNumber=readString(reader, message);
             try{
                 int number=Integer.parseInt(enteredNumber);
                 if (number>=0){
@@ -38,9 +38,9 @@ public class InputValidator {
     
     
     /*Same as then, but for double*/
-    public static double ReadDouble(Scanner reader, String message){
+    public static double readDouble(Scanner reader, String message){
         while(true){
-            String enteredNumber=ReadString(reader, message);
+            String enteredNumber=readString(reader, message);
             try{
                 double number=Double.parseDouble(enteredNumber);
                 if (number>=0){
@@ -56,9 +56,9 @@ public class InputValidator {
     
     
     /*Check if any belongs to an enum*/
-    public static Planet.planetTypes ReadEnum(Scanner reader, String message){
+    public static Planet.planetTypes readEnum(Scanner reader, String message){
         while(true){
-            String enteredPlanetType=ReadString(reader, message).toLowerCase();
+            String enteredPlanetType=readString(reader, message).toLowerCase();
             try{
                 Planet.planetTypes planetType=Planet.planetTypes.valueOf(enteredPlanetType);
                 return planetType;
@@ -69,9 +69,9 @@ public class InputValidator {
     }
     
     /*Check for a valid answer*/
-    public static boolean ReadBoolean(Scanner reader, String message, String option1, String option2){
+    public static boolean readBoolean(Scanner reader, String message, String option1, String option2){
         while(true){
-            String answer=ReadString(reader,message).toLowerCase();
+            String answer=readString(reader,message).toLowerCase();
             if(answer.equals(option1)){
                 return true;
             }else if (answer.equals(option2)){
