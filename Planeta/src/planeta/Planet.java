@@ -6,19 +6,19 @@ public class Planet {
     
     
     /*Fields*/
-    String name=null;
-    int numberOfSatellites=0;
-    double mass=0;
-    double volume=0;
-    int diameter=0;
-    int distanceOfSun=0;
-    enum planetTypes{
+    private String name=null;
+    private int numberOfSatellites=0;
+    private double mass=0;
+    private double volume=0;
+    private int diameter=0;
+    private int distanceOfSun=0;
+    public enum planetTypes{
         gas,
         terrestrial,
         dwarf
     }
-    planetTypes planetType;
-    boolean lookable=false;
+    private planetTypes planetType;
+    private boolean lookable=false;
     
     
     /*Constructor method*/
@@ -34,7 +34,73 @@ public class Planet {
         this.planetType=planetType;
         this.lookable=lookable;
     }
+/* Set methods */
+public void setName(String name){
+    this.name = name;
+}
+
+public void setNumberOfSatellites(int numberOfSatellites){
+    this.numberOfSatellites = numberOfSatellites;
+}
+
+public void setMass(double mass){
+    this.mass = mass;
+}
+
+public void setVolume(double volume){
+    this.volume = volume;
+}
+
+public void setDiameter(int diameter){
+    this.diameter = diameter;
+}
+
+public void setDistanceOfSun(int distanceOfSun){
+    this.distanceOfSun = distanceOfSun;
+}
+
+public void setPlanetType(planetTypes planetType){
+    this.planetType = planetType;
+}
+
+public void setLookable(boolean lookable){
+    this.lookable = lookable;
+}
+
+/* Get methods */
+public String getName(){
+    return name;
+}
+
+public int getNumberOfSatellites(){
+    return numberOfSatellites;
+}
+
+public double getMass(){
+    return mass;
+}
+
+public double getVolume(){
+    return volume;
+}
+
+public int getDiameter(){
+    return diameter;
+}
+
+public int getDistanceOfSun(){
+    return distanceOfSun;
+}
+
+public planetTypes getPlanetType(){
+    return planetType;
+}
+
+public boolean getLookable(){
+    return lookable;
+}
     
+
     /*Showing method*/
     public void ShowPlanetFields(){
         System.out.println("----------------------------------------------------------------");
@@ -51,6 +117,13 @@ public class Planet {
             System.out.println("The planet is not lookable");
         }
         System.out.println("----------------------------------------------------------------");
+    }
+    
+    
+    /*Calculation methods*/
+    public String CalculateDensity(){
+        double density=mass/volume;
+        return "The density of the planet is: "+density;
     }
     
 }
