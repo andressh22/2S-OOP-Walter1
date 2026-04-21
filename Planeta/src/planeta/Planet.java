@@ -19,12 +19,14 @@ public class Planet {
     }
     private planetTypes planetType;
     private boolean lookable=false;
+    private double orbitalPeriod;
+    private double rotationPeriod;
     
     
     /*Constructor method*/
     Planet(String name, int numberOfSatellites, double mass,
             double volume, int diameter, int distanceOfSun,
-            planetTypes planetType, boolean lookable){
+            planetTypes planetType, boolean lookable, double orbitalPeriod, double rotationPeriod){
         this.name=name;
         this.numberOfSatellites=numberOfSatellites;
         this.mass=mass;
@@ -33,6 +35,8 @@ public class Planet {
         this.distanceOfSun=distanceOfSun;
         this.planetType=planetType;
         this.lookable=lookable;
+        this.orbitalPeriod=orbitalPeriod;
+        this.rotationPeriod=rotationPeriod;
     }
     
     /* Set methods */
@@ -67,6 +71,12 @@ public class Planet {
     public void setLookable(boolean lookable){
         this.lookable = lookable;
     }
+    public void setOrbitalPeriod(double orbitalPeriod){
+        this.orbitalPeriod=orbitalPeriod;
+    }
+    public void setRotationPeriod(double rotationPeriod){
+        this.rotationPeriod=rotationPeriod;
+    }
 
     /* Get methods */
     public String getName(){
@@ -100,6 +110,12 @@ public class Planet {
     public boolean getLookable(){
         return lookable;
     }
+    public double getOrbitalPeriod(){
+        return orbitalPeriod;
+    }
+    public double getRotationPeriod(){
+        return rotationPeriod;
+    }
     
 
     /*Showing method*/
@@ -107,16 +123,18 @@ public class Planet {
         System.out.println("----------------------------------------------------------------");
         System.out.println("Planet name: "+name);
         System.out.println("Number of satellites: "+numberOfSatellites);
-        System.out.println("Mass: "+mass+"kg");
-        System.out.println("Volume: "+volume+"km3");
+        System.out.println("Mass: "+mass+" kg");
+        System.out.println("Volume: "+volume+" km3");
         System.out.println("Diameter: "+diameter+" Millions of kilometers");
-        System.out.println("Distance of the sun: "+distanceOfSun+" Million of kilometers");
-        System.out.println("Type: "+planetType+" planet");
+        System.out.println("Distance of the sun: "+distanceOfSun+" Millions of kilometers");
+        System.out.println("Planet type: "+planetType);
         if(lookable==true){
             System.out.println("The planet is lookable");
         }else{
             System.out.println("The planet is not lookable");
         }
+        System.out.println("Orbital period: "+orbitalPeriod+" years");
+        System.out.println("Rotation period: "+rotationPeriod+" days");
         System.out.println("----------------------------------------------------------------");
     }
     
@@ -127,7 +145,7 @@ public class Planet {
             System.out.println("Density cannot be calculated.");
         }else{
             double density=mass/volume;
-            System.out.printf("The density of the planet is: %.2f%n", density);
+            System.out.printf("The density of the planet is: %.2f%n kg/km3", density);
         }
     }
     
